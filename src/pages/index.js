@@ -1,5 +1,11 @@
 import * as React from "react";
+import Layout from "../components/Layout";
 
 export default function Home() {
-  return <h1>Hello World!</h1>;
+  return (
+    <Layout>
+      <h1>Home Page</h1>
+      <a href="https://www.google.com">google</a>
+    </Layout>
+  );
 }
