@@ -1,5 +1,12 @@
 import React from "react";
+import Layout from "../components/Layout";
 
-export default function Error() {
-  return <div> 404 Error Page!</div>;
-}
+const Error = () => {
+  return (
+    <Layout>
+      <h1>Error page</h1>
+    </Layout>
+  );
+};
+
+export default Error;
