@@ -1,13 +1,15 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import { page, text } from "../examples/home.module.css";
+import { ExampleButton } from "../examples/button";
+import styled from "styled-components";
 
 export default function Home() {
   return (
     <Layout>
-      <div className={page}>
+      <ExampleButton>Click Me</ExampleButton>
+      <Wrapper>
         <h1>Home Page</h1>
-        <p>
+        <p className="text">
           Minim officia ipsum veniam sit fugiat consequat pariatur eiusmod
           laboris. Commodo occaecat velit mollit est mollit ad. Enim id
           exercitation sint deserunt anim deserunt ipsum duis nulla labore
@@ -16,7 +18,19 @@ export default function Home() {
           non est reprehenderit tempor. Officia reprehenderit dolore dolor enim
           cillum pariatur aliquip officia nulla sunt.
         </p>
-      </div>
+      </Wrapper>
     </Layout>
   );
 }
+
+const Wrapper = styled.section`
+  color: red;
+
+  h1 {
+    color: green;
+  }
+
+  .text {
+    text-transform: capitalize;
+  }
+`;
