@@ -14,6 +14,7 @@ export default function Navbar() {
     }
   }
   return (
+    // okay now this is verified
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
