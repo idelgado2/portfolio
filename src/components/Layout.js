@@ -5,6 +5,7 @@ import GlobalStyle from "../styles/GlobalStyle.js";
 import theme from "../styles/theme.js";
 import Navbar from "../components/Navbar.js";
 import Head from "./Head.js";
+import Side from "./Side.js";
 //import "normalize.css";
 
 const StyledContent = styled.div`
@@ -66,6 +67,7 @@ export default function Layout({ children, location }) {
           {/* not sure if i need the a tag above here */}
           <StyledContent>
             <Navbar isHome={isHome} />
+            <Side isHome={isHome} />
           </StyledContent>
         </ThemeProvider>
       </div>
