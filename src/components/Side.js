@@ -49,8 +49,7 @@ export default function Side({ children, isHome, orientation }) {
             classNames={isHome ? "fade" : ""}
             timeout={isHome ? 2000 : 0}
           >
-            {/* {children} */}
-            <h1>hello</h1>
+            {children}
           </CSSTransition>
         )}
       </TransitionGroup>

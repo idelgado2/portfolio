@@ -1,16 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  IconExternal,
-  IconFolder,
-  IconFork,
-  IconGitHub,
-  IconInstagram,
-  IconLinkedin,
-  IconLoader,
-  IconLogo,
-  IconStar,
-} from "@components/icons";
+import IconExternal from "./External";
+import IconFolder from "./Folder";
+import IconFork from "./Fork";
+import IconGitHub from "./Github";
+import IconInstagram from "./Instagram";
+import IconLinkedin from "./Linkedin";
+import IconLoader from "./Loader";
+import IconLogo from "./Logo";
+import IconStar from "./Star";
 
 const Icon = ({ name }) => {
   switch (name) {
