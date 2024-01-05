@@ -7,6 +7,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import IconLogo from "./icons/Logo";
 import IconHex from "./icons/hex";
 import { navLinks } from "../config";
+import PropTypes from "prop-types";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -148,6 +149,10 @@ const StyledLinks = styled.div`
   }
 `;
 
+Navbar.propTypes = {
+  isHome: PropTypes.bool,
+};
+
 export default function Navbar({ isHome }) {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection("down");
@@ -178,7 +183,6 @@ export default function Navbar({ isHome }) {
   const timeout = isHome ? 2000 : 0;
   const fadeClass = isHome ? "fade" : "";
   const fadeDownClass = isHome ? "fadedown" : "";
-
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (

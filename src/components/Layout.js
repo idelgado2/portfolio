@@ -65,7 +65,7 @@ export default function Layout({ children, location }) {
           </a> */}
           {/* not sure if i need the a tag above here */}
           <StyledContent>
-            <Navbar />
+            <Navbar isHome={isHome} />
           </StyledContent>
         </ThemeProvider>
       </div>
