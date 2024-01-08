@@ -6,6 +6,7 @@ import theme from "../styles/theme.js";
 import Navbar from "../components/Navbar.js";
 import Head from "./Head.js";
 import Social from "./Social.js";
+import Email from "./Email.js";
 //import "normalize.css";
 
 const StyledContent = styled.div`
@@ -68,6 +69,7 @@ export default function Layout({ children, location }) {
           <StyledContent>
             <Navbar isHome={isHome} />
             <Social isHome={isHome} />
+            <Email isHome={isHome} />
           </StyledContent>
         </ThemeProvider>
       </div>
