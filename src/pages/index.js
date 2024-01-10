@@ -1,12 +1,18 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import Hero from "../components/sections/Hero";
+
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`;
 
 export default function Home({ location }) {
   return (
     <Layout location={location}>
-      <h1>home page</h1>
+      <StyledMainContainer className="fillHeight">
+        <Hero />
+      </StyledMainContainer>
     </Layout>
   );
 }
