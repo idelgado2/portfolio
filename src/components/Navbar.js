@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled, { css } from "styled-components";
 import useScrollDirection from "../hooks/useScrollDirection";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import IconLogo from "./icons/Logo";
 import IconHex from "./icons/hex";
 import { navLinks } from "../config";
-import PropTypes from "prop-types";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -206,6 +206,16 @@ export default function Navbar({ isHome }) {
       )}
     </div>
   );
+  const ResumeLink = (
+    <a
+      className="resume-button"
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
+  );
 
   return (
     <StyledHeader
@@ -241,6 +251,19 @@ export default function Navbar({ isHome }) {
                 ))}
             </TransitionGroup>
           </ol>
+          <TransitionGroup component={null}>
+            {isMounted && (
+              <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                <div
+                  style={{
+                    transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms`,
+                  }}
+                >
+                  {ResumeLink}
+                </div>
+              </CSSTransition>
+            )}
+          </TransitionGroup>
         </StyledLinks>
       </StyledNav>
     </StyledHeader>
