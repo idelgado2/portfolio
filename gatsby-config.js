@@ -50,6 +50,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `education`,
+        path: `${__dirname}/content/education`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
