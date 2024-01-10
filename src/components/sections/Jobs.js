@@ -3,7 +3,7 @@ import styled from "styled-components";
 import sr from "../../utils/sr";
 import { srConfig } from "../../config";
 import { useStaticQuery, graphql } from "gatsby";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 const StyledJobsSection = styled.section`
   max-width: 700px;

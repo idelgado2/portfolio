@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Jobs from "../components/sections/Jobs";
+import Projects from "../components/sections/Projects";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -16,6 +17,7 @@ export default function Home({ location }) {
         <Hero />
         <About />
         <Jobs />
+        <Projects />
       </StyledMainContainer>
     </Layout>
   );
