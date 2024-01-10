@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
+import Jobs from "../components/sections/Jobs";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -14,6 +15,7 @@ export default function Home({ location }) {
       <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
+        <Jobs />
       </StyledMainContainer>
     </Layout>
   );

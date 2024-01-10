@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import ScrollReveal from "scrollreveal";
 import sr from "../../utils/sr";
 import { srConfig } from "../../config";
 
