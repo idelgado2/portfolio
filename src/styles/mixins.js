@@ -1,7 +1,7 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 const button = css`
-  color: var(--green);
+  color: var(--dark-blue);
   background-color: transparent;
   border: 1px solid var(--green);
   border-radius: var(--border-radius);
@@ -15,7 +15,7 @@ const button = css`
   &:hover,
   &:focus-visible {
     outline: none;
-    box-shadow: 4px 4px 0 0 var(--green);
+    box-shadow: 4px 4px 0 0 var(--dark-blue);
     transform: translate(-5px, -5px);
   }
   &:after {
@@ -46,7 +46,7 @@ const mixins = {
 
     &:hover,
     &:focus-visible {
-      color: var(--green);
+      color: var(--dark-blue);
       outline: 0;
     }
   `,
@@ -70,7 +70,7 @@ const mixins = {
       }
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 1px;
@@ -87,9 +87,9 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--green);
+    color: var(--dark-blue);
     background-color: transparent;
-    border: 1px solid var(--green);
+    border: 1px solid var(--dark-blue);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);
@@ -101,7 +101,7 @@ const mixins = {
     &:hover,
     &:focus-visible {
       outline: none;
-      box-shadow: 3px 3px 0 0 var(--green);
+      box-shadow: 3px 3px 0 0 var(--dark-blue);
       transform: translate(-4px, -4px);
     }
     &:after {
@@ -152,7 +152,7 @@ const mixins = {
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: '▹';
+        content: "▹";
         position: absolute;
         left: 0;
         color: var(--green);

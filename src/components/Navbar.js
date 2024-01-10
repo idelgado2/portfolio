@@ -8,6 +8,7 @@ import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 import IconLogo from "./icons/Logo";
 import IconHex from "./icons/hex";
 import { navLinks } from "../config";
+import HamBurger from "./HamBurger";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -130,14 +131,6 @@ const StyledLinks = styled.div`
 
       a {
         padding: 10px;
-
-        &:before {
-          content: "0" counter(item) ".";
-          margin-right: 5px;
-          color: var(--green);
-          font-size: var(--fz-xxs);
-          text-align: right;
-        }
       }
     }
   }
@@ -265,6 +258,13 @@ export default function Navbar({ isHome }) {
             )}
           </TransitionGroup>
         </StyledLinks>
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition classNames={fadeClass} timeout={timeout}>
+              <HamBurger />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
       </StyledNav>
     </StyledHeader>
   );
