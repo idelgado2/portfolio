@@ -1,5 +1,5 @@
 ---
-graduationDate: "2017-08-01"
+graduationDate: "2020-12"
 title: "USC"
 degree: "Masters in Computer Science"
 cover: "./usc.png"

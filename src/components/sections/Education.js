@@ -5,7 +5,7 @@ import { srConfig } from "../../config";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const StyledProjectsGrid = styled.ul`
+const StyledEducationGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
   a {
@@ -52,21 +52,6 @@ const StyledProject = styled.li`
       }
       @media (max-width: 480px) {
         padding: 25px 25px 20px;
-      }
-    }
-    .project-tech-list {
-      justify-content: flex-end;
-
-      @media (max-width: 768px) {
-        justify-content: flex-start;
-      }
-
-      li {
-        margin: 0 0 5px 20px;
-
-        @media (max-width: 768px) {
-          margin: 0 10px 5px 0;
-        }
       }
     }
     .project-links {
@@ -301,19 +286,25 @@ const StyledProject = styled.li`
   }
 `;
 
+const StyledEducation = styled.li``;
+
 const getEducationData = graphql`
   query {
     education: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/content/education/" } }
-      sort: { frontmatter: { date: ASC } }
+      sort: { frontmatter: { graduationDate: DESC } }
     ) {
       nodes {
         frontmatter {
           title
+          url
+          degree
+          graduationDate
           cover {
             childImageSharp {
               gatsbyImageData(
                 width: 700
+                height: 1000
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -343,25 +334,32 @@ export default function Education() {
       <h2 className="numbered-heading" ref={revealTitle}>
         Where I Learned Stuff
       </h2>
-      {educationData &&
-        educationData.education.nodes.map((node, i) => {
-          const { frontmatter, html } = node;
-          const { title, url, cover } = frontmatter;
-          const image = getImage(cover);
-          return (
-            <StyledProject
-              key={i}
-              ref={(el) => (revealProjects.current[i] = el)}
-            >
-              <h3 className="project-title">{title}</h3>
-              <div className="project-image">
-                <a href={url}>
-                  <GatsbyImage image={image} alt={title} className="img" />
-                </a>
-              </div>{" "}
-            </StyledProject>
-          );
-        })}
+      <StyledEducationGrid>
+        {educationData &&
+          educationData.education.nodes.map((node, i) => {
+            const { frontmatter } = node;
+            const { title, url, degree, graduationDate, cover } = frontmatter;
+            const image = getImage(cover);
+            return (
+              <StyledEducation
+                key={i}
+                ref={(el) => (revealProjects.current[i] = el)}
+              >
+                <h3 className="education-degree">
+                  <a href={url}>{degree}</a>
+                </h3>
+                <h3 className="education-date">
+                  <p>{graduationDate}</p>
+                </h3>
+                <div className="education-image">
+                  <a href={url}>
+                    <GatsbyImage image={image} alt={title} className="img" />
+                  </a>
+                </div>
+              </StyledEducation>
+            );
+          })}
+      </StyledEducationGrid>
     </section>
   );
 }

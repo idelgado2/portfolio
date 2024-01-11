@@ -1,5 +1,5 @@
 ---
-graduationDate: "2017-08-01"
+graduationDate: "2017-08"
 title: "TAMUCC"
 degree: "Bachelor in Computer Science"
 cover: "./tamucc.png"
