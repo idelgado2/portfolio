@@ -339,7 +339,7 @@ export default function Education() {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="education">
       <h2 className="numbered-heading" ref={revealTitle}>
         Where I Learned Stuff
       </h2>
