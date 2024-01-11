@@ -1,9 +1,9 @@
 ---
-date: "2017-08-01"
+graduationDate: "2017-08-01"
 title: "TAMUCC"
-company: "Test"
-cover: "./halcyon.png"
-location: "Test, TEST"
+degree: "Bachelor in Computer Science"
+cover: "./tamucc.png"
+location: "Corpus Christi"
 range: "January - January XXXX"
 url: "https://google.com"
 ---

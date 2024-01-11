@@ -1,9 +1,9 @@
 ---
-date: "2020-12-01"
+graduationDate: "2017-08-01"
 title: "USC"
-company: "Test"
-cover: "./halcyon.png"
-location: "Test, TEST"
+degree: "Masters in Computer Science"
+cover: "./usc.png"
+location: "Los Angeles"
 range: "January - January XXXX"
 url: "https://google.com"
 ---
