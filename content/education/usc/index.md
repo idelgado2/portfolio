@@ -2,6 +2,7 @@
 date: "2020-12-01"
 title: "USC"
 company: "Test"
+cover: "./halcyon.png"
 location: "Test, TEST"
 range: "January - January XXXX"
 url: "https://google.com"
