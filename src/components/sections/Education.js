@@ -8,7 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 15px;
   position: relative;
   margin-top: 50px;
@@ -104,7 +104,6 @@ const StyledProject = styled.li`
 
       &:before {
         content: "";
-        display: block;
         position: absolute;
         z-index: 0;
         width: 100%;
@@ -116,11 +115,32 @@ const StyledProject = styled.li`
   }
 
   .project-description {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    background-color: var(--light-navy);
     color: var(--light-slate);
-    font-size: 17px;
+    font-size: var(--fz-lg);
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+      padding: 20px 0;
+      background-color: transparent;
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
 
     a {
       ${({ theme }) => theme.mixins.inlineLink};
+    }
+
+    strong {
+      color: var(--white);
+      font-weight: normal;
     }
   }
 
@@ -143,6 +163,14 @@ const StyledProject = styled.li`
       }
     }
   }
+
+  .project-image {
+    ${({ theme }) => theme.mixins.boxShadow};
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const query = graphql`
@@ -156,7 +184,7 @@ const query = graphql`
           cover {
             childImageSharp {
               gatsbyImageData(
-                layout: CONSTRAINED
+                layout: FIXED
                 placeholder: BLURRED
                 width: 200
                 formats: AUTO
@@ -203,16 +231,18 @@ export default function Education() {
                 key={i}
                 ref={(el) => (revealProjects.current[i] = el)}
               >
-                <div className="project-content">
-                  <h3 className="project-title">
-                    {degree}
-                    {/* <a href={external}>{title}</a> */}
-                  </h3>
-                </div>
-                <div className="project-image">
-                  <a href={url}>
+                <a href={url} className="project-image">
+                  <div>
                     <GatsbyImage image={image} alt={title} className="img" />
-                  </a>
+                  </div>
+                </a>
+
+                <div className="project-content">
+                  <div className="project-description">
+                    <h3 className="project-title">{degree}</h3>
+                    <h3>{location}</h3>
+                    <h4>{graduationDate}</h4>
+                  </div>
                 </div>
               </StyledProject>
             );
