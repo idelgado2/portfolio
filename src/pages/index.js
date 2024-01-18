@@ -18,8 +18,8 @@ export default function Home({ location }) {
         <Hero />
         <About />
         <Jobs />
-        <Education />
         <Projects />
+        <Education />
       </StyledMainContainer>
     </Layout>
   );
