@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const Error = () => {
+export default function Error({ location }) {
   return (
-    <Layout>
+    <Layout location={location}>
       <main className="error-page">
         <section>
           <h1>404</h1>
@@ -12,6 +12,4 @@ const Error = () => {
       </main>
     </Layout>
   );
-};
-
-export default Error;
+}
