@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[159],{1325:function(e,l,t){t.r(l);var a=t(7294),r=t(4272);l.default=()=>a.createElement(r.Z,null,a.createElement("h1",null,"tags page"))}}]);
+//# sourceMappingURL=component---src-pages-tags-js-ac0a509235bcf2f680f9.js.map

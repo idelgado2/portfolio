@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[878],{4003:function(e,l,t){t.r(l);var r=t(7294),a=t(4272);l.default=()=>r.createElement(a.Z,null,r.createElement("h1",null,"recipes page"))}}]);
+//# sourceMappingURL=component---src-pages-recipes-js-db6b2505d753fdd7888b.js.map
