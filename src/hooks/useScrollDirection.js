@@ -30,7 +30,7 @@ const useScrollDirection = ({
 
     const onScroll = () => {
       if (!ticking) {
-        //window.requestAnimationFrame(updateScrollDir);
+        window.requestAnimationFrame(updateScrollDir);
         ticking = true;
       }
     };
