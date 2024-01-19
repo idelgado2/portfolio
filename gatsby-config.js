@@ -15,6 +15,9 @@ module.exports = {
     image: "/duck.png", // Path to your image you placed in the 'static' folder
   },
   pathPrefix: "/portfolio",
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
