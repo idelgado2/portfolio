@@ -6,6 +6,7 @@ import About from "../components/sections/About";
 import Jobs from "../components/sections/Jobs";
 import Projects from "../components/sections/Projects";
 import Education from "../components/sections/Education";
+import FilmProjects from "../components/sections/FilmProjects";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -19,6 +20,7 @@ export default function Home({ location }) {
         <About />
         <Jobs />
         <Projects />
+        <FilmProjects />
         <Education />
       </StyledMainContainer>
     </Layout>

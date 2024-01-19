@@ -330,7 +330,7 @@ const getProjectData = graphql`
   }
 `;
 
-export default function Projects() {
+export default function FilmProjects() {
   const projectData = useStaticQuery(getProjectData);
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
@@ -343,9 +343,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="software-projects">
+    <section id="film-projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Software Projects
+        Film Projects
       </h2>
       <StyledProjectsGrid>
         {projectData &&
