@@ -64,11 +64,8 @@ export default function Hero() {
             <div style={{ transitionDelay: `100ms` }}>
               <h1>Hi, my name is</h1>
               <h2 className="big-heading">Isaac Delgado.</h2>
-              <h3 className="big-heading">I love music, film, and tech.</h3>
-              <p>
-                I work with software and build web applications. I learned to
-                program to solve world problems.
-              </p>
+              <h3 className="big-heading">This is a change using CI/CD.</h3>
+              <p></p>
             </div>
           </CSSTransition>
         )}
