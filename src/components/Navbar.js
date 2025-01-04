@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 import useScrollDirection from "../hooks/useScrollDirection";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 import IconLogo from "./icons/Logo";
-import IconHex from "./icons/hex";
+import IconHex from "./icons/Hex";
 import { navLinks } from "../config";
 import HamBurger from "./HamBurger";
 
