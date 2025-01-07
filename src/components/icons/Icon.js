@@ -9,6 +9,7 @@ import IconLinkedin from "./Linkedin";
 import IconLoader from "./Loader";
 import IconLogo from "./Logo";
 import IconStar from "./Star";
+import IconEmail from "./Email";
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -30,6 +31,8 @@ const Icon = ({ name }) => {
       return <IconLogo />;
     case "Star":
       return <IconStar />;
+    case "Email":
+      return <IconEmail />;
     default:
       return <IconExternal />;
   }

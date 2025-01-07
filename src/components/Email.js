@@ -3,12 +3,16 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Side from "./Side";
 import { email } from "../config";
+import Icon from "./icons/Icon";
 
 const StyledLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   &:after {
     content: "";
@@ -32,6 +36,10 @@ const StyledLinkWrapper = styled.div`
     &:focus {
       transform: translateY(-3px);
     }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
@@ -43,7 +51,9 @@ export default function Email({ isHome }) {
   return (
     <Side isHome={isHome} orientation={"right"}>
       <StyledLinkWrapper>
-        <a href={`mailto:${email}`}>{email}</a>
+        <a href={`mailto:${email}`}>
+          <Icon name={"Email"} />
+        </a>
       </StyledLinkWrapper>
     </Side>
   );
