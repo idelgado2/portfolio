@@ -5,8 +5,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled, { css } from "styled-components";
 import useScrollDirection from "../hooks/useScrollDirection";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
-import IconLogo from "./icons/Logo";
-import IconHex from "./icons/Hex";
 import { navLinks } from "../config";
 import HamBurger from "./HamBurger";
 
@@ -58,52 +56,6 @@ const StyledNav = styled.nav`
   font-family: var(--font-mono);
   counter-reset: item 0;
   z-index: 12;
-
-  .logo {
-    ${({ theme }) => theme.mixins.flexCenter};
-
-    a {
-      color: var(--off-gold);
-      width: 42px;
-      height: 42px;
-      position: relative;
-      z-index: 1;
-
-      .hex-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
-      }
-
-      .logo-container {
-        position: relative;
-        z-index: 1;
-        svg {
-          fill: none;
-          user-select: none;
-          @media (prefers-reduced-motion: no-preference) {
-            transition: var(--transition);
-          }
-          polygon {
-            fill: var(--sleek-black);
-          }
-        }
-      }
-
-      &:hover,
-      &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
-      }
-    }
-  }
 `;
 
 const StyledLinks = styled.div`
@@ -173,29 +125,6 @@ export default function Navbar({ isHome }) {
   const timeout = isHome ? 2000 : 0;
   const fadeClass = isHome ? "fade" : "";
   const fadeDownClass = isHome ? "fadedown" : "";
-  const Logo = (
-    <div className="logo" tabIndex="-1">
-      {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </a>
-      ) : (
-        <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
-        </Link>
-      )}
-    </div>
-  );
   const ResumeLink = (
     <a
       className="resume-button"
@@ -213,13 +142,6 @@ export default function Navbar({ isHome }) {
       scrolledToTop={scrolledToTop}
     >
       <StyledNav>
-        <TransitionGroup component={null}>
-          {isMounted && (
-            <CSSTransition classNames={fadeClass} timeout={timeout}>
-              <>{Logo}</>
-            </CSSTransition>
-          )}
-        </TransitionGroup>
         <StyledLinks>
           <ol>
             <TransitionGroup component={null}>
@@ -241,6 +163,8 @@ export default function Navbar({ isHome }) {
                 ))}
             </TransitionGroup>
           </ol>
+        </StyledLinks>
+        <StyledLinks>
           <TransitionGroup component={null}>
             {isMounted && (
               <CSSTransition classNames={fadeDownClass} timeout={timeout}>

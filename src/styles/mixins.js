@@ -88,7 +88,7 @@ const mixins = {
 
   smallButton: css`
     color: var(--dark-blue);
-    background-color: transparent;
+    background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
@@ -101,8 +101,8 @@ const mixins = {
     &:hover,
     &:focus-visible {
       outline: none;
-      box-shadow: 3px 3px 0 0 var(--dark-blue);
-      transform: translate(-4px, -4px);
+      box-shadow: -3px 3px 0 0 var(--off-gold);
+      transform: translate(4px, -4px);
     }
     &:after {
       display: none !important;
