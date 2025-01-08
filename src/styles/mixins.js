@@ -87,16 +87,18 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--dark-blue);
+    color: var(--off-gold);
     background-color: var(--dark-blue);
     border: 1px solid var(--dark-blue);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);
-    font-family: var(--font-mono);
+    font-family: sans-serif;
     line-height: 1;
     text-decoration: none;
     transition: var(--transition);
+    font-style: oblique;
+    font-weight: 900;
 
     &:hover,
     &:focus-visible {

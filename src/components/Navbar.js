@@ -53,7 +53,7 @@ const StyledNav = styled.nav`
   position: relative;
   width: 100%;
   color: var(--off-gold);
-  font-family: var(--font-mono);
+  font-family: sans-serif;
   counter-reset: item 0;
   z-index: 12;
 `;
@@ -76,7 +76,7 @@ const StyledLinks = styled.div`
       margin: 0 5px;
       position: relative;
       counter-increment: item 1;
-      font-size: var(--fz-xs);
+      font-size: var(--fz-md);
 
       a {
         padding: 10px;
@@ -87,7 +87,7 @@ const StyledLinks = styled.div`
   .resume-button {
     ${({ theme }) => theme.mixins.smallButton};
     margin-left: 15px;
-    font-size: var(--fz-xs);
+    font-size: var(--fz-sm);
   }
 `;
 
