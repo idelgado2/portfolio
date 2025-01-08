@@ -35,6 +35,8 @@ const StyledHeroSection = styled.section`
     margin-top: 5px;
     color: var(--dark-blue);
     line-height: 0.9;
+    font-family: sans-serif;
+    font-style: oblique;
   }
 
   p {
@@ -62,9 +64,8 @@ export default function Hero() {
         {isMounted && (
           <CSSTransition classNames="fadeup" timeout={2000}>
             <div style={{ transitionDelay: `100ms` }}>
-              <h1>Hi, my name is</h1>
-              <h2 className="big-heading">Isaac Delgado.</h2>
-              <h3 className="big-heading">This is a change using CI/CD.</h3>
+              <h2 className="big-heading"> Hey, I'm Isaac Delgado.</h2>
+              <h3 className="medium-heading">A Software Engineer.</h3>
               <p></p>
             </div>
           </CSSTransition>
