@@ -19,8 +19,8 @@ export default function Home({ location }) {
         <Hero />
         <About />
         <Jobs />
-        <Projects />
-        <FilmProjects />
+        {/* <Projects />
+        <FilmProjects /> */}
         <Education />
       </StyledMainContainer>
     </Layout>

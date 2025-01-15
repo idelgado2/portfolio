@@ -26,16 +26,8 @@ module.exports = {
       url: "/#software-projects",
     },
     {
-      name: "Film",
-      url: "/#film-projects",
-    },
-    {
-      name: "School",
+      name: "Education",
       url: "/#education",
-    },
-    {
-      name: "Contact",
-      url: "/#contact",
     },
   ],
 

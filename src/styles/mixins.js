@@ -103,6 +103,7 @@ const mixins = {
     &:hover,
     &:focus-visible {
       outline: none;
+      color: var(--sleek-red);
       box-shadow: -3px 3px 0 0 var(--off-gold);
       transform: translate(4px, -4px);
     }

@@ -6,10 +6,10 @@ import { useStaticQuery, graphql } from "gatsby";
 import { CSSTransition } from "react-transition-group";
 
 const StyledJobsSection = styled.section`
-  max-width: 700px;
+  max-width: 900px;
 
   .inner {
-    display: flex;
+    /* display: flex; */
 
     @media (max-width: 600px) {
       display: block;
@@ -26,9 +26,10 @@ const StyledTabList = styled.div`
   position: relative;
   z-index: 3;
   width: max-content;
-  padding: 0;
+  padding: 0px 0px 20px 0px;
   margin: 0;
   list-style: none;
+  display: flex;
 
   @media (max-width: 600px) {
     display: flex;
@@ -70,12 +71,16 @@ const StyledTabButton = styled.button`
   align-items: center;
   width: 100%;
   height: var(--tab-height);
+  margin: 0px 0px 0px 10px;
   padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy);
-  background-color: transparent;
-  color: ${({ isActive }) => (isActive ? "var(--green)" : "var(--slate)")};
-  font-family: var(--font-mono);
+  border: 2px solid var(--lightest-navy);
+  background-color: var(--dark-blue);
+  color: ${({ isActive }) =>
+    isActive ? "var(--off-gold)" : "var(--sleek-black)"};
+  font-family: sans-serif;
   font-size: var(--fz-xs);
+  font-style: oblique;
+  font-weight: 900;
   text-align: left;
   white-space: nowrap;
 
@@ -93,7 +98,10 @@ const StyledTabButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: var(--light-navy);
+    outline: none;
+    color: var(--sleek-red);
+    box-shadow: -3px 3px 0 0 var(--off-gold);
+    transform: translate(4px, -4px);
   }
 `;
 
@@ -217,7 +225,7 @@ export default function Jobs() {
 
   return (
     <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+      <h2 className="numbered-heading">Experience</h2>
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs">
           {jobData &&
@@ -272,7 +280,6 @@ export default function Jobs() {
                     </h3>
 
                     <p className="range">{range}</p>
-
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                   </StyledTabPanel>
                 </CSSTransition>

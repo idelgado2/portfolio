@@ -126,20 +126,18 @@ export default function About() {
         <StyledText>
           <div>
             <p>
-              Sup.. My name is Isaac Delgado. I am a software engineer by trade.
-              I absolutely love music and film. Specifically I fell in love with
-              hip-hop and R&B when I was very young. Unfortunately I’m not a
-              very talented producer or artist. Trying to figure out what I
-              wanted to do I took a programming course in high school and
-              realized the power software has. I could use it to make anything
-              and work with any industry. Thus my goal in life is to use tech to
-              help musicians and listeners alike.
+              My name is Isaac, and I'm a software engineer by trade. I try my
+              best to enjoy life while I build and create things along the way.
+              While I specialize in front-end development, my true motivation
+              lies in understanding technology on a deeper level to tackle
+              broader challenges as an architect. I’m a hip-hop enthusiast, a
+              newly obsessed golfer (it’s becoming a problem), and my biggest
+              goal for 2025 is to swim from Alcatraz to the shore this August!
             </p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
-          <ul className="skills-list">
+          {/* <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
+          </ul> */}
         </StyledText>
         <StyledPic>
           <div className="wrapper">

@@ -8,7 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   grid-gap: 15px;
   position: relative;
   margin-top: 50px;
@@ -217,7 +217,7 @@ export default function Education() {
   return (
     <section id="education">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Where I Learned Some Stuff
+        Education
       </h2>
       <StyledProjectsGrid>
         {data &&
