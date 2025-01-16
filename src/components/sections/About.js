@@ -130,9 +130,9 @@ export default function About() {
               best to enjoy life while I build and create things along the way.
               While I specialize in front-end development, my true motivation
               lies in understanding technology on a deeper level to tackle
-              broader challenges as an architect. I’m a hip-hop enthusiast, a
-              newly obsessed golfer (it’s becoming a problem), and my biggest
-              goal for 2025 is to swim from Alcatraz to the shore this August!
+              broader challenges as an architect. I’m a hip-hop head, a newly
+              obsessed golfer (it’s becoming a problem), and my biggest goal for
+              2025 is to swim from Alcatraz to the shore this August!
             </p>
           </div>
           {/* <ul className="skills-list">
