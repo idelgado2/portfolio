@@ -1,15 +1,15 @@
 ---
-date: '1'
-title: 'Halcyon Theme'
-cover: './halcyon.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+date: "1"
+title: "Book Digest"
+cover: "./bookdigest_temp_cover.png"
+github: "https://github.com/idelgado2/bookdigest"
+external: "https://idelgado2.github.io/bookdigest/"
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
+  - NextJs
+  - Typescript
+  - React
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode), [Package Control](https://packagecontrol.io/packages/Halcyon%20Theme), [Atom Package Manager](https://atom.io/themes/halcyon-syntax), and [npm](https://www.npmjs.com/package/hyper-halcyon-theme).
+A web app designed for book lovers and researchers to easily collect, categorize, and export their favorite quotes. Simply input quotes from any book, assign them to themes or custom categories, and effortlessly organize your collection. Bookdigest makes it easy to retrieve inspiration, reference key ideas, or share curated insights.
+
+APP STYLING CURRENTLY UNDER CONSTRUCTION :)

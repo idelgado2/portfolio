@@ -19,8 +19,7 @@ export default function Home({ location }) {
         <Hero />
         <About />
         <Jobs />
-        {/* <Projects />
-        <FilmProjects /> */}
+        <Projects />
         <Education />
       </StyledMainContainer>
     </Layout>
