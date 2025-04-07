@@ -1,7 +1,7 @@
 ---
 date: "1"
 title: "Book Digest"
-cover: "./bookdigest_temp_cover.png"
+cover: "./bookdigest_cover.png"
 github: "https://github.com/idelgado2/bookdigest"
 external: "https://idelgado2.github.io/bookdigest/"
 tech:
