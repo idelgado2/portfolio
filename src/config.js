@@ -3,6 +3,10 @@ module.exports = {
 
   socialMedia: [
     {
+      name: "Medium",
+      url: "https://medium.com/@isaacdelgado1994",
+    },
+    {
       name: "GitHub",
       url: "https://github.com/idelgado2",
     },
@@ -24,6 +28,10 @@ module.exports = {
     {
       name: "Projects",
       url: "/#software-projects",
+    },
+    {
+      name: "Blog",
+      url: "https://medium.com/@isaacdelgado1994",
     },
     {
       name: "Education",

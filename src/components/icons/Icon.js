@@ -7,6 +7,7 @@ import IconGitHub from "./Github";
 import IconInstagram from "./Instagram";
 import IconLinkedin from "./Linkedin";
 import IconLoader from "./Loader";
+import IconMedium from "./Medium";
 import IconStar from "./Star";
 import IconEmail from "./Email";
 
@@ -26,6 +27,8 @@ const Icon = ({ name }) => {
       return <IconLinkedin />;
     case "Loader":
       return <IconLoader />;
+    case "Medium":
+      return <IconMedium />;
     case "Star":
       return <IconStar />;
     case "Email":

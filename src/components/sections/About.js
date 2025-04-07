@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import sr from "../../utils/sr";
 import { srConfig } from "../../config";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -112,12 +113,20 @@ const StyledPic = styled.div`
   }
 `;
 
+const StyledLink = styled.div`
+  position: relative;
+  max-width: 300px;
+  .blog-section {
+    margin-top: 50px;
+  }
+`;
+
 export default function About() {
   const revealContainer = useRef(null);
   useEffect(() => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
-  const skills = ["Angular", "Python", "React", "Azure", "SQL", "C#"];
+  const skills = ["JavaScript", "React", "Angular", "Azure", "SQL", "C#"];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -126,18 +135,22 @@ export default function About() {
         <StyledText>
           <div>
             <p>
-              My name is Isaac, and I'm a software engineer by trade. I try my
-              best to enjoy life while I build and create things along the way.
-              While I specialize in front-end development, my true motivation
-              lies in understanding technology on a deeper level to tackle
-              broader challenges as an architect. I’m a hip-hop head, a newly
+              My name is Isaac, and I'm a software engineer. I try my best to
+              enjoy life while I build and create things along the way. I
+              consider myself a full stack engineer, but I definitely gravitate
+              towards front-end development. I love hip-hop music, I am a newly
               obsessed golfer (it’s becoming a problem), and my biggest goal for
               2025 is to swim from Alcatraz to the shore this August!
             </p>
           </div>
-          {/* <ul className="skills-list">
+          <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul> */}
+          </ul>
+          {/* <StyledLink>
+            <div className="blog-section">
+              <h3>Check out my blog posts here</h3>
+            </div>
+          </StyledLink> */}
         </StyledText>
         <StyledPic>
           <div className="wrapper">

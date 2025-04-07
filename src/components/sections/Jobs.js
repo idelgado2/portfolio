@@ -83,6 +83,7 @@ const StyledTabButton = styled.button`
   font-weight: 900;
   text-align: left;
   white-space: nowrap;
+  border-radius: 8px;
 
   @media (max-width: 768px) {
     padding: 0 15px 2px;
@@ -99,7 +100,7 @@ const StyledTabButton = styled.button`
   &:hover,
   &:focus {
     outline: none;
-    color: var(--sleek-red);
+    color: var(--off-gold);
     box-shadow: -3px 3px 0 0 var(--off-gold);
     transform: translate(4px, -4px);
   }
