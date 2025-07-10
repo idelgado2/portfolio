@@ -63,7 +63,9 @@ export default function Hero() {
         {isMounted && (
           <CSSTransition classNames="fadeup" timeout={2000}>
             <div style={{ transitionDelay: `100ms` }}>
-              <h2 className="big-heading">Hello, I'm Isaac Delgado.</h2>
+              <h2 className="big-heading">
+                Hello, I'm Isaac Delgado. This is a test
+              </h2>
               <h3 className="medium-heading">I am Software Engineer.</h3>
               <p></p>
             </div>
